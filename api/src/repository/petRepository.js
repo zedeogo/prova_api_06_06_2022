@@ -1,5 +1,4 @@
 import { connection } from './connection.js'
-import mysql2 from 'mysql2'
 
 export const adicionarPet = async pet => {
     const command = `
