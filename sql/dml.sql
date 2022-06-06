@@ -9,3 +9,6 @@ INSERT INTO tb_pet(nm_pet)
 
 INSERT INTO tb_pet(nm_pet)
     VALUES("porco");
+
+DELETE FROM tb_pet
+      WHERE id_pet = 6;

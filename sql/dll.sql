@@ -6,3 +6,4 @@ CREATE TABLE tb_pet(
     id_pet      INT PRIMARY KEY AUTO_INCREMENT,
     nm_pet      VARCHAR(50)
 );
+
