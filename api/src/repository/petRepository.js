@@ -12,7 +12,8 @@ export const adicionarPet = async pet => {
 
 export const listarPets = async _ => {
     const command = `
-        SELECT * 
+        SELECT id_pet       id,
+               nm_pet       nome
           FROM tb_pet;
     `
     const [lines] = await connection.query(command);

@@ -1,9 +1,9 @@
 import { Router } from 'express'
 import { adicionarPet, listarPets, deletarPet, modificarPet } from '../repository/petRepository.js'
 
-const server = Router()
+const endpoints = Router()
 
-server.get('/pet', async (req, resp) => {
+endpoints.get('/pet', async (req, resp) => {
     try{
         const response = await listarPets();
         resp.send(response);
@@ -13,7 +13,7 @@ server.get('/pet', async (req, resp) => {
     }
 })
 
-server.post('/pet', async (req, resp) => {
+endpoints.post('/pet', async (req, resp) => {
     try{
         const pet = req.body
         if(!pet.name)
@@ -26,7 +26,7 @@ server.post('/pet', async (req, resp) => {
     }
 })
 
-server.delete('/pet', async (req, resp) => {
+endpoints.delete('/pet', async (req, resp) => {
     try{
         const pet = req.body
         if(!pet.id)
@@ -42,7 +42,7 @@ server.delete('/pet', async (req, resp) => {
     }
 })
 
-server.put('/pet', async (req, resp) => {
+endpoints.put('/pet', async (req, resp) => {
     try{
         const pet = req.body
         if(!pet.id)
@@ -60,4 +60,4 @@ server.put('/pet', async (req, resp) => {
     }
 })
 
-export default server
+export default endpoints
